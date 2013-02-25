@@ -54,7 +54,10 @@ NSMutableArray *busObjectsArray;
             }
             if (counter > 1) { // remaining items are buses
                 if (counter == 2) { // only set navbar title once
-                    self.navigationItem.title = [busStrings objectAtIndex:1];
+                    NSString *stopNameInQuotes = [busStrings objectAtIndex:1];
+                    // strip the quotes off the stop title
+                    NSString *stopName = [stopNameInQuotes stringByReplacingOccurrencesOfString:@"\"" withString:@""];
+                    self.navigationItem.title = stopName;
                 }
                 float secondsSince1970 = ([[busStrings objectAtIndex:3] floatValue]/1000);
                 NSString *theNumberInQuotes = [busStrings objectAtIndex:2];
@@ -103,7 +106,7 @@ NSMutableArray *busObjectsArray;
                         action:@selector(refreshView:)
                         forControlEvents:UIControlEventValueChanged];
     
-//    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"satinweave.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
 
