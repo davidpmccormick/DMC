@@ -18,9 +18,11 @@
      [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:15.0f], UITextAttributeFont,
      [UIColor whiteColor], UITextAttributeTextColor,
      [UIColor grayColor], UITextAttributeTextShadowColor,
-     [NSValue valueWithUIOffset:UIOffsetMake(0.0f, 1.0f)], UITextAttributeTextShadowOffset,
+     [NSValue valueWithUIOffset:UIOffsetMake(1.0f, 1.0f)], UITextAttributeTextShadowOffset,
      nil]
      ];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys: [UIFont fontWithName:@"AvenirNextCondensed-DemiBold" size:13.0], UITextAttributeFont,nil] forState:UIControlStateNormal];
     
 
     

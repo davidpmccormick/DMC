@@ -64,7 +64,12 @@ NSMutableArray *busObjectsArray;
                 // strip the quotes off the bus number
                 NSString *theNumber = [theNumberInQuotes stringByReplacingOccurrencesOfString:@"\"" withString:@""];
                 
-                theTime = [[NSDate dateWithTimeIntervalSince1970:secondsSince1970] description];
+                
+                NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"h:mm a"];
+                NSString *theTime = [NSString stringWithFormat:@"%@",
+                                         [formatter stringFromDate:[NSDate dateWithTimeIntervalSince1970:secondsSince1970]]];
+                
                 [aBus setBusNumber:theNumber];
                 [aBus setBusTime:theTime];
                 [busObjectsArray addObject:aBus];
@@ -109,7 +114,7 @@ NSMutableArray *busObjectsArray;
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.parentViewController.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"satinweave.png"]];
     self.tableView.backgroundColor = [UIColor clearColor];
-
+    
     [self busesAtStopNumber];
 
 }
@@ -145,10 +150,10 @@ NSMutableArray *busObjectsArray;
     }
     
     Bus *currentBus = [busObjectsArray objectAtIndex:indexPath.row];
-    UILabel *someLabel = (UILabel *)[cell viewWithTag:100];
-    UILabel *anotherLabel = (UILabel *)[cell viewWithTag:101];
-    [someLabel setText:[currentBus busNumber]];
-    [anotherLabel setText:[currentBus busTime]];
+    UILabel *busNumberLabel = (UILabel *)[cell viewWithTag:100];
+    UILabel *busTimeLabel = (UILabel *)[cell viewWithTag:101];
+    [busNumberLabel setText:[currentBus busNumber]];
+    [busTimeLabel setText:[currentBus busTime]];
     
     UIImage *background = [self cellBackgroundForRowAtIndexPath:indexPath];
     UIImageView *cellBackgroundView = [[UIImageView alloc] initWithImage:background];

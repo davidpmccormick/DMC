@@ -30,7 +30,7 @@
     [_busStopInputField becomeFirstResponder];
     [self.navigationController.navigationBar setNeedsLayout];
     
-    
+
     
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"satinweave.png"]];

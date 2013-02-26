@@ -14,9 +14,6 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="inputfield.png" translatesAutoresizingMaskIntoConstraints="NO" id="jb3-lR-scb"/>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="goButton" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxO-Bn-KzD">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="76" id="BFT-x4-oWs"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNextCondensed-DemiBold" family="Avenir Next Condensed" pointSize="20"/>
                                 <state key="normal" title="Go" backgroundImage="busnobg.png">
                                     <color key="titleColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
@@ -41,19 +38,18 @@
                             </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="ySF-6r-IQH" firstAttribute="top" secondItem="csN-Ab-bTE" secondAttribute="top" constant="49" id="5IZ-Yo-WwC"/>
-                            <constraint firstItem="ySF-6r-IQH" firstAttribute="leading" secondItem="csN-Ab-bTE" secondAttribute="leading" constant="39" id="C4x-i1-a8x"/>
-                            <constraint firstItem="JxO-Bn-KzD" firstAttribute="leading" secondItem="jb3-lR-scb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="RpP-IJ-fDR"/>
+                            <constraint firstAttribute="trailing" secondItem="JxO-Bn-KzD" secondAttribute="trailing" constant="19" id="0o8-Sp-8WG"/>
+                            <constraint firstItem="JxO-Bn-KzD" firstAttribute="top" secondItem="jb3-lR-scb" secondAttribute="top" type="default" id="9wW-Pq-u1h"/>
+                            <constraint firstItem="JxO-Bn-KzD" firstAttribute="bottom" secondItem="jb3-lR-scb" secondAttribute="bottom" type="default" id="RDH-Zm-msP"/>
+                            <constraint firstItem="jb3-lR-scb" firstAttribute="top" secondItem="csN-Ab-bTE" secondAttribute="top" constant="14" id="RDM-xi-Dga"/>
+                            <constraint firstItem="ySF-6r-IQH" firstAttribute="leading" secondItem="csN-Ab-bTE" secondAttribute="leading" constant="37" id="V29-00-aOj"/>
                             <constraint firstItem="ySF-6r-IQH" firstAttribute="baseline" secondItem="JxO-Bn-KzD" secondAttribute="baseline" type="default" id="dLu-hm-7iQ"/>
-                            <constraint firstItem="jb3-lR-scb" firstAttribute="top" secondItem="csN-Ab-bTE" secondAttribute="top" constant="29" id="gVy-vS-4WX"/>
-                            <constraint firstItem="jb3-lR-scb" firstAttribute="leading" secondItem="csN-Ab-bTE" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="iso-Yy-aj8"/>
-                            <constraint firstItem="JxO-Bn-KzD" firstAttribute="top" secondItem="csN-Ab-bTE" secondAttribute="top" constant="30" id="xvh-0s-I4v"/>
+                            <constraint firstItem="jb3-lR-scb" firstAttribute="leading" secondItem="csN-Ab-bTE" secondAttribute="leading" constant="18" id="daT-3h-Dge"/>
+                            <constraint firstItem="ySF-6r-IQH" firstAttribute="top" secondItem="csN-Ab-bTE" secondAttribute="top" constant="31" id="dyI-DZ-hEx"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Enter Bus Stop Number" id="6TV-se-0WC">
-                        <barButtonItem key="backBarButtonItem" title="back" id="4FP-vY-1vO">
-                            <color key="tintColor" red="0.29803922772407532" green="0.29803922772407532" blue="0.29803922772407532" alpha="1" colorSpace="calibratedRGB"/>
-                        </barButtonItem>
+                        <barButtonItem key="backBarButtonItem" title="back" id="4FP-vY-1vO"/>
                         <barButtonItem key="rightBarButtonItem" title="info" id="787-BC-8WX">
                             <connections>
                                 <segue destination="sqC-aP-q2E" kind="modal" identifier="infoModal" modalTransitionStyle="partialCurl" id="Sbo-Zc-Hr0"/>
@@ -139,7 +135,7 @@
                                         </label>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="101" contentMode="left" text="time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YTw-mB-Zs0">
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="101" id="ic9-zm-Q87"/>
+                                                <constraint firstAttribute="width" constant="190" id="TDE-bi-Nep"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="17"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -151,12 +147,13 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="YTw-mB-Zs0" secondAttribute="trailing" constant="20" type="default" id="52a-YG-Qgt"/>
                                     <constraint firstItem="0AP-a7-IM3" firstAttribute="centerY" secondItem="0O0-Xw-KEF" secondAttribute="centerY" type="default" id="8eM-WC-pzc"/>
-                                    <constraint firstAttribute="bottom" secondItem="YTw-mB-Zs0" secondAttribute="bottom" constant="21" id="ElI-9U-5aw"/>
+                                    <constraint firstItem="YTw-mB-Zs0" firstAttribute="bottom" secondItem="0AP-a7-IM3" secondAttribute="bottom" type="default" id="Df9-3h-mUQ"/>
                                     <constraint firstItem="dyJ-bg-hCq" firstAttribute="top" secondItem="0O0-Xw-KEF" secondAttribute="top" constant="22" id="Eyq-1X-2ae"/>
                                     <constraint firstItem="0AP-a7-IM3" firstAttribute="leading" secondItem="0O0-Xw-KEF" secondAttribute="leading" constant="14" id="JhB-nm-Lbk"/>
                                     <constraint firstItem="dyJ-bg-hCq" firstAttribute="leading" secondItem="0O0-Xw-KEF" secondAttribute="leading" constant="20" type="default" id="KKB-Wd-80C"/>
+                                    <constraint firstItem="YTw-mB-Zs0" firstAttribute="top" secondItem="0AP-a7-IM3" secondAttribute="top" type="default" id="qBk-NH-Vtt"/>
+                                    <constraint firstAttribute="trailing" secondItem="YTw-mB-Zs0" secondAttribute="trailing" constant="20" type="default" id="u6q-aZ-hAX"/>
                                 </constraints>
                             </tableViewCell>
                         </prototypes>
